@@ -1,6 +1,7 @@
 import React from "react";
 import { questions } from "../../utils/constants";
 import QuestionsItem from "./QuestionsItem";
+import { Link } from "react-router-dom";
 
 const Questions: React.FC = () => {
     return (
@@ -18,7 +19,7 @@ const Questions: React.FC = () => {
                             about StreamVibe.
                         </p>
                     </div>
-                    <button className="btn-error btn max-md:btn-sm">Ask a question</button>
+                    <Link to={"/support"} className="btn-error btn max-md:btn-sm">Ask a question</Link>
                 </div>
             </div>
             {/* content */}

@@ -15,6 +15,10 @@
     font-family: "Ubuntu", sans-serif;
 }
 
-.active {
-   text-decoration: solid;
+.swiper-button-prev {
+    color: red;
+}
+
+.swiper-button-next {
+    color: red;
 }

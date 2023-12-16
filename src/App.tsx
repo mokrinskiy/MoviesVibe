@@ -3,6 +3,7 @@ import Footer from "./layouts/Footer";
 import NavBar from "./layouts/NavBar";
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
+import Catalog from "./pages/Catalog";
 
 const Layout = () => {
     return (
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+            },
+            {
+                path: "/catalog",
+                element: <Catalog />,
             },
         ],
     },

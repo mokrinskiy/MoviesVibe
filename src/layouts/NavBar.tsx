@@ -2,6 +2,8 @@ import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { NavLink } from "react-router-dom";
+import Modal from "../components/SearchModal";
+import SearchModal from "../components/SearchModal";
 
 const NavBar: React.FC = () => {
     return (
@@ -22,10 +24,9 @@ const NavBar: React.FC = () => {
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                     >
                         <li>
-                            <NavLink to={"/movies"}>Movies</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={"/shows"}>Shows</NavLink>
+                            <NavLink className="text-lg" to={"/catalog"}>
+                                Movies & TV Shows
+                            </NavLink>
                         </li>
                         <li>
                             <NavLink to={"/support"}>Support</NavLink>
@@ -41,13 +42,8 @@ const NavBar: React.FC = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <NavLink className="text-lg" to={"/movies"}>
-                            Movies
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink className="text-lg" to={"/shows"}>
-                            Shows
+                        <NavLink className="text-lg" to={"/catalog"}>
+                            Movies & TV Shows
                         </NavLink>
                     </li>
                     <li>
@@ -59,9 +55,15 @@ const NavBar: React.FC = () => {
             </div>
             {/* navbar end */}
             <div className="navbar-end">
-                <button className="btn btn-square">
+                <button
+                    onClick={() =>
+                        document.getElementById("my_modal_2").showModal()
+                    }
+                    className="btn btn-square"
+                >
                     <SearchIcon />
                 </button>
+                <SearchModal />
             </div>
         </div>
     );

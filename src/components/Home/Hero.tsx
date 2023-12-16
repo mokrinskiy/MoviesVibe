@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
         <div
             className="hero min-h-screen"
             style={{
-                backgroundImage: "url(hero.jpg)",
+                backgroundImage: `url(hero.jpg)`,
             }}
         >
             <div className="hero-overlay bg-opacity-80 bg-black"></div>
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
                     </p>
                     <button className="btn btn-error">
                         <PlayArrowIcon />
-                        Start Watching Now
+                        Start watching now
                     </button>
                 </div>
             </div>
